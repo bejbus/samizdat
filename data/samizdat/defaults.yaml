@@ -271,3 +271,7 @@ plugins:
       blacklist:
         - !ruby/regexp /@(yopmail.com|i.ua)$/
 
+page:
+  css: [ ]
+  js: [ 'flashembed' ]
+

@@ -1,0 +1,10 @@
+#f_body_tbl.error {
+  border : 1px solid red;
+}
+.error {
+  border-color : red;
+}
+.error-notice {
+  border : 2px dashed red;
+}
+

@@ -1,0 +1,75 @@
+#!/usr/bin/env ruby
+
+=begin
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "bla-bla-bla"
+"bla-bla-bla"
+msgstr "bla-bla-bla"
+"bla-bla-bla"
+
+# comment
+
+=end
+
+if (ARGV.size < 2)
+  puts "Usage #{$0} infile.po outfile.js [provides1] [provides2] ... [providesN]"
+  exit 1
+end
+
+msgid  = []
+msgstr = []
+provides = ARGV[2..ARGV.size-1]
+provides = nil if provides.empty?
+plural = nil
+locale = nil
+
+File.open(ARGV[0]) do |fd|
+  ary = nil
+  out = nil
+  fd.each_line do |line|
+    case line.chomp
+    when /\A"(.*)"\z/
+      out << $1
+    when /\Amsgid "(.*)"\z/
+      msgstr << out if out
+      out = $1
+    when /\Amsgstr "(.*)"\z/
+      msgid << out
+      out = $1
+    end
+  end
+  msgstr << out
+end
+
+if msgid[0] == ""
+  if msgstr[0] =~ /Plural-Forms:\s+nplurals=\d+;\s+plural=\(([^;]+)\);\\n/
+    plural = $1
+  end
+  if msgstr[0] =~ /Language:\s+(\w+)\\n/
+    locale = $1
+  end
+end
+
+File.open(ARGV[1], "w") do |fd|
+  if provides
+    fd.puts "L10n.provides_domains(#{provides.map{|v| "'#{v.sub(/\.js\z/, '')}'"}.join(', ')});"
+    fd.puts
+  end
+
+  if plural
+    fd.puts "L10n.plural = function(n) {\n\treturn (#{plural})\n};"
+    fd.puts
+  end
+
+  if locale
+    fd.puts "L10n.set_locale('#{locale}');"
+    fd.puts
+  end
+
+  out = []
+  0.upto(msgid.size-1) do |i|
+    out << "'#{msgid[i]}' :\n\t'#{msgstr[i]}'" unless msgid[i]=="" or msgstr[i]==""
+  end
+  fd.puts "L10n.add({\n#{out.join(",\n\n")}\n});"
+end

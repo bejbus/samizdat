@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: samizdat js devel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-11-05 15:03+0300\n"
+"PO-Revision-Date: 2011-11-06 15:06+0300\n"
+"Last-Translator: anonymous <not-a-mail@noreply.org>\n"
+"Language-Team: ru <ru@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: dynamicform.js:30
+#: dynamicform.js:59
+msgid "Add more..."
+msgstr "Добавить…"
+
+#: dynamicform.js:30
+#: dynamicform.js:59
+msgid "Add one more field"
+msgstr "Добавить ещё одно поле"
+
+#: dynamicform.js:46
+msgid "Reset form to initial state?"
+msgstr "Вернуть состояние всех полей к исходному?"
+
+#: tinymce_support.js:27
+#: tinymce_support.js:103
+msgid "Enable or disable tinymce"
+msgstr "Включить/отключить tinymce"
+
+#: jquery.formchecker.js:64
+#, python-format
+msgid "Bad password - shorter than %i chars"
+msgstr "Плохой пароль — короче %i знаков"
+
+#: jquery.formchecker.js:131
+msgid "Required field is empty"
+msgstr "Необходимое поле незаполнено"
+
+#: jquery.formchecker.js:137
+msgid "Optional field is invalid"
+msgstr "Необязательное поле имеет неправильный формат"
+
+#: jquery.formchecker.js:154
+msgid "None of mutually exclusive fields are defined"
+msgstr "Ни одно из взаимно исключающих полей не заполнено"
+
+#: jquery.formchecker.js:157
+msgid "Exacly one field from mutually exclusive fields must be defined"
+msgstr "Только одно поле из числа взаимно исключающих может быть заполнено"
+
+#: jquery.formchecker.js:172
+msgid "Passwords are not matching"
+msgstr "Пароли не совпадают"
+
+#: jquery.formchecker.js:178
+msgid "Empty password"
+msgstr "Пустой пароль"
+
+#: jquery.formchecker.js:181
+msgid "Bad password"
+msgstr "Плохой пароль"
+

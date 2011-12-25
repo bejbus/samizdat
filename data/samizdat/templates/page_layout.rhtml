@@ -7,9 +7,14 @@
   <base href="<%= @request.base %>" />
   <meta name="generator" content="Samizdat <%= SAMIZDAT_VERSION %>" />
 
-  <link rel="stylesheet" type="text/css" href="css/<%= @request.style %>.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="<%= mkfname(@request.style, 'css') %>.css" media="screen" />
 <% @request.alt_styles.each do |alt| %>
-  <link rel="alternate stylesheet" type="text/css" title="<%= alt %>" href="css/<%= alt %>.css" media="screen" />
+  <link rel="alternate stylesheet" type="text/css" title="<%= alt %>" href="<%= mkfname(alt, 'css') %>.css" media="screen" />
+<% end %>
+
+<link rel="stylesheet" type="text/css" href="css/js-support.css" media="screen" />
+<% @css.each do |css| %>
+  <link rel="stylesheet" type="text/css" href="<%= mkfname(css, 'css') %>.css" media="screen" />
 <% end %>
 
 <% @feeds.each do |title, link| %>
@@ -18,9 +23,12 @@
 <% @links.each do |rel, href| %>
   <link rel="<%= rel %>" href="<%= href %>" />
 <% end %>
-
+<script type="text/javascript" src="javascript/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="tinymce/tiny_mce.js"></script>
+<script type="text/javascript" src="js/samizdat.min.js"></script>
+<script type="text/javascript" src="js/<%= @request.language %>/samizdat.js"></script>
 <% @js.each do |js| %>
-  <script type="text/javascript" src="js/<%= js %>.js"></script>
+  <script type="text/javascript" src="<%= mkfname(js, 'js') %>.js"></script>
 <% end %>
 </head>
 

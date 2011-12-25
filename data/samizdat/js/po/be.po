@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: samizdat js devel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-11-05 15:03+0300\n"
+"PO-Revision-Date: 2011-11-06 15:06+0300\n"
+"Last-Translator: anonymous <not-a-mail@noreply.org>\n"
+"Language-Team: be <be@li.org>\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: dynamicform.js:30
+#: dynamicform.js:59
+msgid "Add more..."
+msgstr "Дадаць…"
+
+#: dynamicform.js:30
+#: dynamicform.js:59
+msgid "Add one more field"
+msgstr "Дадаць яшчэ адно поле"
+
+#: dynamicform.js:46
+msgid "Reset form to initial state?"
+msgstr "Ці вернуць стан усіх палёў да пачатковага?"
+
+#: tinymce_support.js:27
+#: tinymce_support.js:103
+msgid "Enable or disable tinymce"
+msgstr "Задзейнічаць ці абязьдзейніць tinymce"
+
+#: jquery.formchecker.js:64
+#, python-format
+msgid "Bad password - shorter than %i chars"
+msgstr "Кепскі пароль — карацейшы за %i знакаў"
+
+#: jquery.formchecker.js:131
+msgid "Required field is empty"
+msgstr "Патрэбнае поле пакінутае пустым"
+
+#: jquery.formchecker.js:137
+msgid "Optional field is invalid"
+msgstr "Неабавязковае поле мае няправільны фармат"
+
+#: jquery.formchecker.js:154
+msgid "None of mutually exclusive fields are defined"
+msgstr "Ніводнае з узаемна выключных палёў не запоўненае"
+
+#: jquery.formchecker.js:157
+msgid "Exacly one field from mutually exclusive fields must be defined"
+msgstr "Толькі адно поле зь ліку ўзаемна выключных мусіць быць запоўненае"
+
+#: jquery.formchecker.js:172
+msgid "Passwords are not matching"
+msgstr "Паролі не аднолькавыя"
+
+#: jquery.formchecker.js:178
+msgid "Empty password"
+msgstr "Пусты пароль"
+
+#: jquery.formchecker.js:181
+msgid "Bad password"
+msgstr "Кепскі пароль"
+

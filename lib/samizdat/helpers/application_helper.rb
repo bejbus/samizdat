@@ -419,4 +419,8 @@ module ApplicationHelper
       map
     end
   end
+
+  def mkfname(fname, base)
+    fname.eql?(File.basename(fname)) ? File.join(base,fname) : fname
+  end
 end
