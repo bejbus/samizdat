@@ -35,7 +35,7 @@ div#head-right input {
 	border: none;	}
 
 div#head-right input[type="text"] {
-  background: url("/img/magnifer.png") no-repeat scroll 2px 3px transparent;
+	background: url("/img/magnifer.png") no-repeat scroll 2px 3px transparent;
 	width: 130px;
 	padding: 0px 10px 0px 20px; }
 
