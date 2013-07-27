@@ -13,6 +13,7 @@ require 'samizdat/plugins/content_inline'
 
 class HtmlPlugin < ContentInlinePlugin
   register_as 'html'
+  register_inline_format 'text/html', 'html'
 
   def match?(format)
     'text/html' == format

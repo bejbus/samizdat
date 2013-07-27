@@ -19,17 +19,10 @@ module MessageHelper
     %{<p><a href="#{id}">}+_('See the full message')+'</a></p>'
   end
 
-  # inline formats that need a link to view source
-  #
-  SOURCE_FORMAT = {
-    'text/textile' => 'textile',
-    'text/html' => 'html'
-  }
-
   # render _message_ info line (except tags)
   #
   def message_info(message, mode)
-    format = SOURCE_FORMAT[message.content.format] if message.id
+    format = InlineFormat.instance[message.content.format] if message.id
 
     moderation_log = (message.id.kind_of?(Integer) and
       Moderation.find(site, message.id, { :message => true }).size > 0)
