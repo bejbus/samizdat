@@ -17,6 +17,8 @@ require 'samizdat'
 require 'samizdat/plugins/content_file'
 
 class HTML5MediaPlugin < ContentFilePlugin
+  register_as 'html5media'
+
   AUDIO_FORMATS = %w{audio/ogg audio/webm audio/wave audio/wav audio/x-wav audio/x-pn-wav}
   VIDEO_FORMATS = %w{video/ogg video/webm application/ogg}
 
@@ -78,5 +80,3 @@ class HTML5MediaPlugin < ContentFilePlugin
   end
 
 end
-
-PluginClasses.instance['html5media'] = HTML5MediaPlugin

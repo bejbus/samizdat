@@ -1,3 +1,4 @@
+# TODO: generate field_name
 # vim: et sw=2 sts=2 ts=8 tw=0
 
 require 'samizdat'
@@ -5,6 +6,7 @@ require 'samizdat/plugins/spam'
 require 'time'
 
 class TimeFieldPlugin < SpamPlugin
+  register_as 'time_field'
 
   DEFAULT_DELAY = 60
 
@@ -36,5 +38,3 @@ class TimeFieldPlugin < SpamPlugin
     'fa021ae862f528e719dcdddb069eefd5'
   end
 end
-
-PluginClasses.instance['time_field'] = TimeFieldPlugin
